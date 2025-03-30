@@ -1,23 +1,24 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setQuery } from "../redux/querySlice";
+import "./QueryHistory.css";
 
 const QueryHistory = () => {
   const history = useSelector((state) => state.query.history);
   const dispatch = useDispatch();
 
   return (
-    <div className="p-4 w-full max-w-lg mx-auto">
-      <h2 className="text-lg font-semibold mb-2">Query History</h2>
-      <ul className="bg-white border rounded-lg shadow-md max-h-40 overflow-y-auto">
+    <div className="query-history-container">
+      <h2 className="query-history-heading">Query History</h2>
+      <ul className="query-history-list">
         {history.length === 0 ? (
-          <li className="p-2 text-gray-500">No previous queries</li>
+          <li className="query-history-empty">No previous queries</li>
         ) : (
           history.map((query, index) => (
             <li
               key={index}
               onClick={() => dispatch(setQuery(query))}
-              className="p-2 cursor-pointer hover:bg-gray-100 border-b"
+              className="query-history-item"
             >
               {query}
             </li>

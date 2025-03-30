@@ -1,0 +1,32 @@
+.query-results-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .query-results-heading {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .query-results-loading {
+    color: #578FCA;
+    font-size: 16px;
+  }
+  
+  .query-results-error {
+    color: #dc2626;
+    font-size: 16px;
+  }
+  
+  .query-results-message {
+    color: #16a34a;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  

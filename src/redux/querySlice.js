@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   query: "",
-  history: [],
   result: null,
   loading: false,
   error: null,
+  history: [],
 };
 
 const querySlice = createSlice({
@@ -15,26 +15,39 @@ const querySlice = createSlice({
     setQuery: (state, action) => {
       state.query = action.payload;
     },
-    addToHistory: (state, action) => {
-      state.history.unshift(action.payload);
+    setLoading: (state, action) => {
+      state.loading = action.payload;
     },
     setResult: (state, action) => {
       state.result = action.payload;
-      state.loading = false;
-      state.error = null;
-    },
-    setLoading: (state) => {
-      state.loading = true;
-      state.error = null;
+      state.history.unshift(action.payload); 
     },
     setError: (state, action) => {
       state.error = action.payload;
-      state.loading = false;
+    },
+    addToHistory: (state, action) => {
+      state.history.unshift(action.payload);
     },
   },
 });
 
-export const { setQuery, addToHistory, setResult, setLoading, setError } =
-  querySlice.actions;
 
+export const submitQuery = (query) => async (dispatch) => {
+  dispatch(setLoading(true));
+
+  try {
+    
+    setTimeout(() => {
+      const mockResult = `Result for: ${query}`;
+      dispatch(setResult(mockResult));
+      dispatch(addToHistory(query));
+      dispatch(setLoading(false));
+    }, 1500);
+  } catch (error) {
+    dispatch(setError("Failed to process query"));
+    dispatch(setLoading(false));
+  }
+};
+
+export const { setQuery, setLoading, setResult, setError, addToHistory } = querySlice.actions;
 export default querySlice.reducer;

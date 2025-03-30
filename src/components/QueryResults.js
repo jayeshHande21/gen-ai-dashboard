@@ -1,11 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import "./QueryResults.css"; 
 
 const QueryResults = () => {
   const { result, loading, error } = useSelector((state) => state.query);
 
-  // Sample mock data for visualization
   const data = result
     ? [
         { name: "Category A", value: Math.floor(Math.random() * 100) },
@@ -15,12 +22,13 @@ const QueryResults = () => {
     : [];
 
   return (
-    <div className="p-4 w-full max-w-lg mx-auto text-center bg-white shadow-md rounded-lg">
-      {loading && <p className="text-blue-500">Processing your query...</p>}
-      {error && <p className="text-red-500">{error}</p>}
+    <div className="query-results-container">
+      <h2 className="query-results-heading">Query Results</h2>
+      {loading && <p className="query-results-loading">Processing your query...</p>}
+      {error && <p className="query-results-error">{error}</p>}
       {result && (
         <>
-          <p className="text-green-600 font-semibold">{result}</p>
+          <p className="query-results-message">{result}</p>
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={data}>
               <XAxis dataKey="name" />
