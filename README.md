@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# 🚀 Gen AI Dashboard  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React-based Data Query Dashboard Prototype** for a **Gen AI Analytics tool** that allows users to input natural language queries and receive mock data visualizations.  
 
-## Available Scripts
+## 🌐 Live Demo  
+🔗 [Gen AI Dashboard](https://growthgear-ai.netlify.app/)  
 
-In the project directory, you can run:
+## 📂 Project Structure  
 
-### `npm start`
+```plaintext
+gen-ai-dashboard/
+│-- public/             # Static assets (e.g., logo, index.html)
+│-- src/
+│   │-- components/     # Reusable UI components
+│   │-- redux/         # Redux store, actions, reducers
+│   │-- styles/        # CSS/Tailwind styling
+│   │-- App.js         # Main component
+│   │-- index.js       # Entry point
+│-- .gitignore         # Files to ignore in Git
+│-- package.json       # Dependencies and scripts
+│-- README.md          # Project documentation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+✨ Features
 
-### `npm run build`
+✅ AI-Powered Query Input
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    Users can type natural language queries in a text input field.
+    
+    The system provides AI-powered suggestions to help users formulate queries.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Query History Tracking
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    Previously submitted queries are stored and displayed, allowing users to reuse or modify them easily.
+    
+    Clicking on a previous query auto-fills the input field.
 
-### `npm run eject`
+✅ Mock Data Visualization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    Query results are displayed visually using charts powered by Recharts/Chart.js.
+    
+    Example charts include bar graphs, line charts, and pie charts.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ State Management with Redux
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    The application manages state efficiently using Redux.
+    
+    Query input, results, and history are all handled through a centralized store.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+✅ Responsive and Modern UI
 
-## Learn More
+    The UI is designed with Tailwind CSS / Material-UI for a clean and modern look.
+    
+    Fully responsive design ensures smooth usability on both desktop and mobile devices.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🛠️ Tech Stack
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Frontend: React.js
+    
+    State Management: Redux
+    
+    Styling: Tailwind CSS / Material-UI
+    
+    Charts: Recharts / Chart.js
 
-### Code Splitting
+🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1️⃣ Clone the Repository
 
-### Analyzing the Bundle Size
+    git clone https://github.com/jayeshHande21/gen-ai-dashboard.git
+    cd gen-ai-dashboard
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2️⃣ Install Dependencies
 
-### Making a Progressive Web App
+    npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+3️⃣ Run the Development Server
 
-### Advanced Configuration
+    npm start
+    
+    Runs the app at http://localhost:3000/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+📌 Deployment
 
-### Deployment
+    This project is deployed on Netlify. You can deploy it yourself using:
+    
+    npm run build
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📜 License
+
+This project is open-source and available under the MIT License.
+  
+  🔗 GitHub Repo
+  
+  🔗 jayeshHande21/gen-ai-dashboard
+  
+  🚀 Developed by
+      
+      Jayesh Hande
+
